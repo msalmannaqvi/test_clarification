@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Clarification Type</th>
+        <th>Rfx</th>
+        <th>Calrification Category</th>
+        <th>Asign To</th>
+        <th>Due Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>{% for o in obj %}
+
+
+
+        <td>{{o.clarificationtype.type}}</td>
+        <td>{{o.rfx.rfxid}}</td>
+        <td>{{o.clarification.clarification}}</td>
+        <td>{{o.assigned_to}}</td>
+        <td>{{o.expires}}</td>
+        <td>{{clari.file.url}}</td>
+          {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
